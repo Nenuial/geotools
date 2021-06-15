@@ -15,7 +15,8 @@ Imports:
     purrr,
     countrycode,
     stringr,
-    ISOcodes
+    ISOcodes,
+    scales
 RoxygenNote: 7.1.1
 Depends: 
     R (>= 4.0)

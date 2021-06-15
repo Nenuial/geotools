@@ -7,6 +7,7 @@ gtl_pkg_options <-
     theme = "pomological_red",
     mode = "light",
     opacity = 1,
+    book_resources = "/",
     plot_standard_width = 63.5,
     plot_standard_height = 28.57,
     plot_full_width = 67.73,
