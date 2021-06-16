@@ -5,7 +5,7 @@
 #' @return A crs object
 #' @export
 gtl_crs_proj <- function(code) {
-  crs_proj %>%
+  crs_proj |>
     dplyr::filter(crs == code) -> crs
 
   if(nrow(crs) != 1) stop("Could not find a matching CRS.")
