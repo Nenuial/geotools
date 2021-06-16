@@ -20,7 +20,7 @@ gtl_crs_proj <- function(code) {
 #' @return A crs object
 #' @export
 gtl_crs_regional <- function(country) {
-  crs_regional %>%
+  crs_regional |>
     dplyr::filter(country == country) -> crs
 
   if(nrow(crs) != 1) stop("Could not find a matching CRS.")

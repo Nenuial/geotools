@@ -68,8 +68,8 @@ gtl_opt_short_language <- function(valid = c("en", "fr")) {
 #' @return A string with the language name (lowercase)
 #' @export
 gtl_opt_long_language <- function() {
-  ISOcodes::ISO_639_3 %>%
-    dplyr::filter(Part1 == gtl_pkg_options("language")) %>%
-    dplyr::pull(Name) %>%
+  ISOcodes::ISO_639_3 |>
+    dplyr::filter(Part1 == gtl_pkg_options("language")) |>
+    dplyr::pull(Name) |>
     stringr::str_to_lower()
 }
