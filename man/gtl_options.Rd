@@ -7,7 +7,7 @@
 gtl_options(...)
 }
 \arguments{
-\item{...}{Option names to retrieve option values or \code{[key]=[value]} pairs to set options.}
+\item{...}{Option names to retrieve option values or \verb{[key]=[value]} pairs to set options.}
 }
 \description{
 Set or get options for my package
@@ -16,11 +16,11 @@ Set or get options for my package
 
 The following options are supported
 \itemize{
- \item{\code{language}}{The default language}
- \item{\code{country}}{The default country setting}
- \item{\code{theme}}{The default ggplot theme}
- \item{\code{mode}}{The default ggplot mode}
- \item{\code{opacity}}{The default opacity}
+\item{\code{language}}{The default language}
+\item{\code{country}}{The default country setting}
+\item{\code{theme}}{The default ggplot theme}
+\item{\code{mode}}{The default ggplot mode}
+\item{\code{opacity}}{The default opacity}
 }
 }
 

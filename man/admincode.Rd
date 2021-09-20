@@ -12,30 +12,43 @@ admincode(..., country = c("Switzerland", "Russia"))
   \describe{
     \item{\code{sourcevar}}{Vector which contains the codes or country names to be
 converted (character or factor)}
-    \item{\code{origin}}{Coding scheme of origin (string such as "iso3c" enclosed in
-quotes ""): type "?codelist" for a list of available codes.}
-    \item{\code{destination}}{Coding scheme of destination (string such as "iso3c"
-enclosed in quotes ""): type `?codelist` for a list of
-available codes.}
+    \item{\code{origin}}{A string which identifies the coding scheme of origin (e.g., \code{"iso3c"}). See
+\code{\link[countrycode]{codelist}} for a list of available codes.}
+    \item{\code{destination}}{A string or vector of strings which identify the coding
+scheme of destination (e.g., \code{"iso3c"} or \code{c("cowc", "iso3c")}). See
+\code{\link[countrycode]{codelist}} for a list of available codes. When users supply a
+vector of destination codes, they are used sequentially to fill in
+missing values not covered by the previous destination code in the
+vector.}
     \item{\code{warn}}{Prints unique elements from sourcevar for which no match was found}
     \item{\code{nomatch}}{When countrycode fails to find a match for the code of
-origin, it fills-in the destination vector with nomatch. The default
-behavior is to fill non-matching codes with NA. If nomatch = NULL,
+origin, it fills-in the destination vector with \code{nomatch}. The default
+behavior is to fill non-matching codes with \code{NA}. If \code{nomatch = NULL},
 countrycode tries to use the origin vector to fill-in missing values in the
-destination vector. nomatch must be either NULL, of length 1, or of the same
-length as sourcevar.}
-    \item{\code{custom_dict}}{A data frame which supplies a new dictionary to replace
-the built-in country code dictionary. Each column contains a different code
-and must include no duplicates. The data frame format should resemble
-`countrycode::codelist`.  Warning: when `custom_dict` is used, no sanity
-checks are conducted.}
+destination vector. \code{nomatch} must be either \code{NULL}, of length 1, or of the same
+length as \code{sourcevar}.}
+    \item{\code{custom_dict}}{A data frame which supplies a new dictionary to
+replace the built-in country code dictionary. Each column
+contains a different code and must include no duplicates. The
+data frame format should resemble \code{\link[countrycode]{codelist}}. Users
+can pre-assign attributes to this custom dictionary to affect
+behavior (see Examples section):
+\itemize{
+\item "origin.regex" attribute: a character vector with the names
+of columns containing regular expressions.
+\item "origin.valid" attribute: a character vector with the names
+of columns that are accepted as valid origin codes.
+}}
     \item{\code{custom_match}}{A named vector which supplies custom origin and
 destination matches that will supercede any matching default result. The name
 of each element will be used as the origin code, and the value of each
 element will be used as the destination code.}
-    \item{\code{origin_regex}}{Logical: When using a custom dictionary, if TRUE then the
-origin codes will be matched as regex, if FALSE they will be matched exactly.
-When using the default dictionary (dictionary = NULL), origin_regex will be ignored.}
+    \item{\code{origin_regex}}{NULL or Logical: When using a custom
+dictionary, if TRUE then the origin codes will be matched as
+regex, if FALSE they will be matched exactly. When NULL,
+\code{countrycode} will behave as TRUE if the origin name is in the
+\code{custom_dictionary}'s \code{origin_regex} attribute, and FALSE
+otherwise. See examples section below.}
   }}
 
 \item{country}{Select the custom dictionary, currently one of \emph{switzerland} or \emph{russia}}

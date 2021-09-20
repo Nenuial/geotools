@@ -16,7 +16,9 @@ Imports:
     countrycode,
     stringr,
     ISOcodes,
-    scales
-RoxygenNote: 7.1.1
+    scales,
+    lifecycle
+RoxygenNote: 7.1.2
 Depends: 
     R (>= 4.0)
+Roxygen: list(markdown = TRUE)

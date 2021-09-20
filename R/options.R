@@ -17,16 +17,16 @@ gtl_pkg_options <-
 
 #' Set or get options for my package
 #'
-#' @param ... Option names to retrieve option values or \code{[key]=[value]} pairs to set options.
+#' @param ... Option names to retrieve option values or `[key]=[value]` pairs to set options.
 #'
 #' @section Supported options:
 #' The following options are supported
 #' \itemize{
-#'  \item{\code{language}}{The default language}
-#'  \item{\code{country}}{The default country setting}
-#'  \item{\code{theme}}{The default ggplot theme}
-#'  \item{\code{mode}}{The default ggplot mode}
-#'  \item{\code{opacity}}{The default opacity}
+#'  \item{`language`}{The default language}
+#'  \item{`country`}{The default country setting}
+#'  \item{`theme`}{The default ggplot theme}
+#'  \item{`mode`}{The default ggplot mode}
+#'  \item{`opacity`}{The default opacity}
 #' }
 #'
 #' @export
