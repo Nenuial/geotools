@@ -17,3 +17,11 @@ admincode <- function(..., country = c("Switzerland", "Russia")) {
     custom_dict = dictionary
   )
 }
+
+#' Provide HMD country codes
+#'
+#' @return A dataframe with 2 columns and 47 rows
+#' @export
+gtl_hmd_codes <- function() {
+  return(hmd_codes)
+}
