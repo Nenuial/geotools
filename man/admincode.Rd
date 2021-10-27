@@ -4,7 +4,7 @@
 \alias{admincode}
 \title{Provide custom countrycode function}
 \usage{
-admincode(..., country = c("Switzerland", "Russia"))
+admincode(..., country = c("China", "Switzerland", "Russia"))
 }
 \arguments{
 \item{...}{
@@ -51,7 +51,7 @@ regex, if FALSE they will be matched exactly. When NULL,
 otherwise. See examples section below.}
   }}
 
-\item{country}{Select the custom dictionary, currently one of \emph{switzerland} or \emph{russia}}
+\item{country}{Select the custom dictionary, currently one of \emph{China}, \emph{Switzerland} or \emph{Russia}}
 }
 \value{
 A vector with the desired output
