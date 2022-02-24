@@ -7,7 +7,7 @@
 gtl_crs_proj(code)
 }
 \arguments{
-\item{country}{A string with the country name}
+\item{code}{A string with the crs code}
 }
 \value{
 A crs object
