@@ -1,6 +1,6 @@
 #' Get a defined CRS for a given code
 #'
-#' @param country A string with the country name
+#' @param code A string with the crs code
 #'
 #' @return A crs object
 #' @export
