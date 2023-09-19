@@ -20,7 +20,7 @@ Imports:
     lifecycle,
     withr,
     clock
-RoxygenNote: 7.1.2
+RoxygenNote: 7.2.3
 Depends: 
     R (>= 4.0)
 Roxygen: list(markdown = TRUE)
