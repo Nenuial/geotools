@@ -1,12 +1,11 @@
 Package: geotools
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Provide Support for Geography Packages
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Author: Pascal Burkhard
+Maintainer: Pascal Burkhard <pascal.burkhard@gmail.com>
+Description: Support functions for the geographer package
+License: CC0
 Encoding: UTF-8
 LazyData: true
 Imports: 
