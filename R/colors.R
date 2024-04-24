@@ -33,3 +33,40 @@ gtl_hc_color_list <- function(...) {
     to = to
   )
 }
+
+#' Return a list of color breaks for Higchart maps
+#'
+#' @param breaks The data with the breaks (factors !)
+#' @param palette A color palette that can take a numeric argument
+#'
+#' @return A list of lists to use in colorAxis' dataClasses argument
+#' @export
+gtl_hc_discrete_color_axis <- function(breaks, palette) {
+  lvls <- levels(breaks)
+  colors <- palette(length(lvls))
+
+  tibble::tibble(
+    lvls = lvls,
+    colors = colors
+  ) |>
+    purrr::pmap(gtl_hc_discrete_color_list) -> color_axis_list
+}
+
+#' Function to build the highchart colorAxis list
+#'
+#' @param ... lvls and colors
+#'
+#' @keywords internal
+gtl_hc_discrete_color_list <- function(...) {
+  data <- list(...)
+
+  from <- as.character(data$lvls)
+  to <- as.character(data$lvls)
+
+  list(
+    color = data$colors,
+    from = from,
+    to = to
+  )
+}
+
