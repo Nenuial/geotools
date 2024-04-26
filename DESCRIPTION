@@ -4,8 +4,8 @@ Title: Provide Support for Geography Packages
 Version: 0.1.2
 Author: Pascal Burkhard
 Maintainer: Pascal Burkhard <pascal.burkhard@gmail.com>
-Description: Support functions for the geographer package
-License: CC0
+Description: Support functions for the geographer package.
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Imports: 
@@ -16,10 +16,15 @@ Imports:
     stringr,
     ISOcodes,
     scales,
-    lifecycle,
     withr,
-    clock
-RoxygenNote: 7.2.3
+    clock,
+    glue,
+    sf,
+    tibble
+RoxygenNote: 7.3.1
 Depends: 
     R (>= 4.0)
 Roxygen: list(markdown = TRUE)
+URL: https://nenuial.github.io/geotools/
+Authors@R: 
+    person("Pascal", "Burkhard", , "pascal.burkhard@gmail.com", role = c("aut", "cre"))

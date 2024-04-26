@@ -5,5 +5,5 @@
 #' @return A formatted expression
 #' @export
 gtl_sci_10_html <- function(x) {
-  paste0(gsub("e\\+?", " · 10<sup>", scales::scientific_format()(x)), "</sup>")
+  paste0(gsub("e\\+?", " \u00b7 10<sup>", scales::scientific_format()(x)), "</sup>")
 }
