@@ -11,19 +11,20 @@ License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Imports: 
-    settings,
-    dplyr,
-    purrr,
-    countrycode,
-    stringr,
-    ISOcodes,
-    scales,
-    withr,
     clock,
+    countrycode,
+    dplyr,
+    ISOcodes,
     glue,
-    sf,
+    lifecycle,
+    purrr,
     tibble,
-    preferably,
+    scales,
+    settings,
+    sf,
+    stringr,
+    withr
+Suggests:
     santoku
 RoxygenNote: 7.3.1
 Depends: 
