@@ -15,3 +15,8 @@ A formatted expression
 \description{
 Format numbers using scientific notation for html
 }
+\examples{
+gtl_sci_10_html(10e6)
+gtl_sci_10_html(10e9)
+
+}

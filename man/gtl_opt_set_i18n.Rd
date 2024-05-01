@@ -10,5 +10,17 @@ gtl_opt_set_i18n(code)
 \item{code}{A valid i18n code (example: fr_CH)}
 }
 \description{
-Set language and country settings
+This function allows setting the default language and country
+settings using a valid i18n code.
+}
+\examples{
+# Swiss french locale
+gtl_opt_set_i18n("fr_CH")
+gtl_options("language")
+gtl_options("country")
+
+# American english locale
+gtl_opt_set_i18n("en_US")
+gtl_options("language")
+gtl_options("country")
 }

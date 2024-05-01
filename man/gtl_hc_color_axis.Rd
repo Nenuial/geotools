@@ -7,7 +7,7 @@
 gtl_hc_color_axis(breaks, palette)
 }
 \arguments{
-\item{breaks}{The data with the breaks (use santoku chop !)}
+\item{breaks}{The data with the breaks (using chopped data with \code{\link[santoku:santoku-package]{santoku::santoku}})}
 
 \item{palette}{A color palette that can take a numeric argument}
 }
@@ -16,4 +16,9 @@ A list of lists to use in colorAxis' dataClasses argument
 }
 \description{
 Return a list of color breaks for Higchart maps
+}
+\examples{
+data <- seq(1, 20)
+data_cut <- santoku::chop(data, breaks = 3)
+gtl_hc_color_axis(data_cut, rainbow)
 }

@@ -2,7 +2,7 @@
 % Please edit documentation in R/gis.R
 \name{gtl_crs_regional}
 \alias{gtl_crs_regional}
-\title{Get a defined CRS for a given country}
+\title{Get a defined proj4 string for a given country}
 \usage{
 gtl_crs_regional(country)
 }
@@ -10,8 +10,19 @@ gtl_crs_regional(country)
 \item{country}{A string with the country name}
 }
 \value{
-A crs object
+A CRS object
 }
 \description{
-Get a defined CRS for a given country
+A function that returns an ideal CRS for a given
+country.
+}
+\details{
+The current list of possible countries:
+\itemize{
+\item Russia
+}
+}
+\examples{
+gtl_crs_regional("Russia")
+
 }

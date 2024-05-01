@@ -1,10 +1,14 @@
 #' Return a list of color breaks for Higchart maps
 #'
-#' @param breaks The data with the breaks (use santoku chop !)
+#' @param breaks The data with the breaks (using chopped data with [`santoku::santoku`])
 #' @param palette A color palette that can take a numeric argument
 #'
 #' @return A list of lists to use in colorAxis' dataClasses argument
 #' @export
+#' @examples
+#' data <- seq(1, 20)
+#' data_cut <- santoku::chop(data, breaks = 3)
+#' gtl_hc_color_axis(data_cut, rainbow)
 gtl_hc_color_axis <- function(breaks, palette) {
   lvls <- levels(breaks)
   colors <- palette(length(lvls))
@@ -13,7 +17,7 @@ gtl_hc_color_axis <- function(breaks, palette) {
     lvls = lvls,
     colors = colors
   ) |>
-    purrr::pmap(gtl_hc_color_list) -> color_axis_list
+    purrr::pmap(gtl_hc_color_list)
 }
 
 #' Function to build the highchart colorAxis list

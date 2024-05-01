@@ -15,5 +15,7 @@ translate_enfr(english, french)
 String depending on package language option
 }
 \description{
-Translate function
+\code{translate_enfr()} was renamed to \code{gtl_translate_enfr()} to create a more
+consistent API.
 }
+\keyword{internal}

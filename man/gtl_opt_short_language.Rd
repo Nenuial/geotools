@@ -13,5 +13,19 @@ gtl_opt_short_language(valid = c("en", "fr"))
 A string
 }
 \description{
-Return short language code
+Function that returns the short language code currently set
+if it is in the list of \emph{valid} options. If the current language
+isn't in the list of \emph{valid} options, the first element of the
+valid elements is returned.
+}
+\examples{
+gtl_opt_set_i18n("fr_CH")
+gtl_opt_short_language(valid = c("de", "fr"))
+
+# With the current local not among the valid options
+gtl_opt_set_i18n("en_US")
+gtl_opt_short_language(valid = c("de", "fr"))
+}
+\seealso{
+\code{\link[=gtl_opt_set_i18n]{gtl_opt_set_i18n()}}
 }

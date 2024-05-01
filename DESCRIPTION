@@ -2,7 +2,9 @@ Package: geotools
 Type: Package
 Title: Provide Support for Geography Packages
 Version: 0.1.2
-Author: Pascal Burkhard
+Authors@R: 
+    person("Pascal", "Burkhard", , "pascal.burkhard@gmail.com", role = c("aut", "cre"),
+           comment = c(ORCID = "0009-0001-5504-5084"))
 Maintainer: Pascal Burkhard <pascal.burkhard@gmail.com>
 Description: Support functions for the geographer package.
 License: MIT + file LICENSE
@@ -21,11 +23,11 @@ Imports:
     glue,
     sf,
     tibble,
-    preferably
+    preferably,
+    santoku
 RoxygenNote: 7.3.1
 Depends: 
-    R (>= 4.0)
+    R (>= 4.1)
 Roxygen: list(markdown = TRUE)
-URL: https://nenuial.github.io/geotools/
-Authors@R: 
-    person("Pascal", "Burkhard", , "pascal.burkhard@gmail.com", role = c("aut", "cre"))
+URL: https://geotools.nenuial.org
+Config/Needs/website: nenuial/geopkg

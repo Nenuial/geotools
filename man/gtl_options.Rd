@@ -24,3 +24,12 @@ The following options are supported
 }
 }
 
+\examples{
+# Retrieve default options
+gtl_options("language")
+gtl_options("plot_standard_width")
+
+# Change a setting and retrieve it
+gtl_options(plot_standard_width = 25)
+gtl_options("plot_standard_width")
+}

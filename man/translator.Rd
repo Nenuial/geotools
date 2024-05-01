@@ -13,5 +13,7 @@ translator(dictionary)
 A function that translates
 }
 \description{
-Creates translation function for named string list
+\code{translator()} was renamed to \code{gtl_translator()} to create a more
+consistent API.
 }
+\keyword{internal}

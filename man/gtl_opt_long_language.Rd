@@ -10,5 +10,17 @@ gtl_opt_long_language()
 A string with the language name (lowercase)
 }
 \description{
-Return long language name
+Function to get the current language setting in full.
+}
+\examples{
+# With a french locale
+gtl_opt_set_i18n("fr_CH")
+gtl_opt_long_language()
+
+# With an english locale
+gtl_opt_set_i18n("en_US")
+gtl_opt_long_language()
+}
+\seealso{
+\code{\link[=gtl_opt_set_i18n]{gtl_opt_set_i18n()}}
 }

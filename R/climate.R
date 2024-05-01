@@ -1,12 +1,20 @@
 #' Determine the Köppen climate based on temperature,
 #' precipitation and the latitude.
 #'
-#' @param temp A vector with temperatures for each month
-#' @param prec A vector with precipitations for each month
-#' @param lat The latitude
+#' @param temp A vector with temperatures in degree Celsius for each month
+#' @param prec A vector with precipitations in millimeters for each month
+#' @param lat The latitude in degrees
 #'
 #' @return A string with the Köppen climate determination
 #' @export
+#' @examples
+#' # Based on climate data for Geneva
+#' gtl_koppen_code(
+#'   temp = c(2.1, 3, 6.8, 10.4, 14.8, 18.4, 20.5, 20.2, 15.8, 11.5, 6, 2.7),
+#'   prec = c(70.8, 60.6, 56.9, 69, 75.7, 78.8, 83.2, 81.4, 94.9, 97.6, 90.3, 85.2),
+#'   lat = 6
+#' )
+#'
 gtl_koppen_code <- function(temp, prec, lat) {
   clim <- ""
   ptot <- sum(prec)

@@ -2,16 +2,36 @@
 % Please edit documentation in R/gis.R
 \name{gtl_crs_proj}
 \alias{gtl_crs_proj}
-\title{Get a defined CRS for a given code}
+\title{Get a defined CRS definition for a given code}
 \usage{
 gtl_crs_proj(code)
 }
 \arguments{
-\item{code}{A string with the crs code}
+\item{code}{A string with the CRS identifier}
 }
 \value{
-A crs object
+A CRS object
 }
 \description{
-Get a defined CRS for a given code
+A function that returns the corresponding CRS for different
+codes.
+}
+\details{
+The current list of available codes is:
+\itemize{
+\item eqearth
+\item equirec
+\item gallpeters
+\item goode
+\item hobodyer
+\item mercator
+\item robinson
+\item wintri
+}
+}
+\examples{
+gtl_crs_proj("eqearth")
+
+gtl_crs_proj("robinson")
+
 }

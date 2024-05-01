@@ -1,5 +1,51 @@
-url: https://nenuial.github.io/geotools/
+url: https://geotools.nenuial.org
 template:
-  package: preferably
-  bootstrap: 5
+  package: geopkg
 
+reference:
+- title: Colors
+  description: |
+    Provide functions to make color axis for Highcharts.
+  contents:
+  - gtl_hc_color_axis
+  - gtl_hc_discrete_color_axis
+
+- title: Country codes
+  description: |
+    Function related to country codes.
+  contents:
+  - gtl_admin_code
+  - gtl_hmd_codes
+
+- title: Climates
+  description: |
+    Provide functions to determine climates. Currently only the Köppen
+    climate dermination is provided.
+  contents:
+  - gtl_koppen_code
+
+- title: Formatting
+  description: |
+    Provide functions to format different elements (dates, scientific notation).
+  contents:
+  - gtl_full_date
+  - gtl_sci_10_html
+
+- title: Projection
+  description: |
+    Provide functions for CRS projections
+  contents:
+  - gtl_crs_proj
+  - gtl_crs_regional
+
+- title: Options and language
+  description: |
+    Managing geotools options and language settings along with
+    functions for providing translation strings.
+  contents:
+  - gtl_options
+  - gtl_opt_set_i18n
+  - gtl_opt_short_language
+  - gtl_opt_long_language
+  - gtl_translate_enfr
+  - gtl_translator
