@@ -2,6 +2,20 @@ url: https://geotools.nenuial.org
 template:
   package: geopkg
 
+navbar:
+  structure:
+    left: [reference, geoverse]
+  components:
+    geoverse:
+      text: GeoVerse
+      menu:
+      - text: geodata
+        href: https://geodata.nenuial.org
+      - text: geovizr
+        href: https://geovizr.nenuial.org
+      - text: ggeo
+        href: https://ggeo.nenuial.org
+
 reference:
 - title: Colors
   description: |

@@ -1,12 +1,14 @@
 Package: geotools
 Type: Package
-Title: Provide Support for Geography Packages
+Title: Support for Geography Packages
 Version: 0.1.2
 Authors@R: 
     person("Pascal", "Burkhard", , "pascal.burkhard@gmail.com", role = c("aut", "cre"),
            comment = c(ORCID = "0009-0001-5504-5084"))
 Maintainer: Pascal Burkhard <pascal.burkhard@gmail.com>
-Description: Support functions for the geographer package.
+Description: Support functions for the GeoVerse packages.
+URL: https://geotools.nenuial.org
+BugReports: http://github.com/nenuial/geotools/issues/
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
@@ -30,5 +32,4 @@ RoxygenNote: 7.3.1
 Depends: 
     R (>= 4.1)
 Roxygen: list(markdown = TRUE)
-URL: https://geotools.nenuial.org
 Config/Needs/website: nenuial/geopkg
