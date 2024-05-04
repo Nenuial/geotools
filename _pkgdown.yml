@@ -19,19 +19,32 @@ navbar:
         href: https://ggeo.nenuial.org
 
 reference:
-- title: Colors
+- title: API
   description: |
-    Provide functions to make color axis for Highcharts.
+    Provide functions to assist API calls
   contents:
   - gtl_hc_color_axis
   - gtl_hc_discrete_color_axis
 
-- title: Country codes
+- title: Colors
   description: |
-    Function related to country codes.
+    Provide functions to make color axis for Highcharts.
+  contents:
+  - gtl_chk_api_call
+  - gtl_chk_idb_api_key
+  - gtl_chk_rnoaa_api_key
+  - gtl_dwnl_api_json
+
+- title: Country codes and lists
+  description: |
+    Function related to country data.
   contents:
   - gtl_admin_code
   - gtl_hmd_codes
+  - gtl_country_list_noaa
+  - gtl_country_list_wb
+  - gtl_swiss_canton_abbr
+  - gtl_swiss_canton_id
 
 - title: Climates
   description: |
@@ -40,12 +53,13 @@ reference:
   contents:
   - gtl_koppen_code
 
-- title: Formatting
+- title: Formatting and labels
   description: |
     Provide functions to format different elements (dates, scientific notation).
   contents:
   - gtl_full_date
   - gtl_sci_10_html
+  - gtl_relabel_dash
 
 - title: Projection
   description: |
@@ -53,6 +67,7 @@ reference:
   contents:
   - gtl_crs_proj
   - gtl_crs_regional
+  - gtl_gis_tissot_indicatrix
 
 - title: Options and language
   description: |
