@@ -1,3 +1,5 @@
+# Climate determination -----------------------------------------------------------------------
+
 #' Determine the Köppen climate based on temperature,
 #' precipitation and the latitude.
 #'
@@ -141,3 +143,4 @@ gtl_calculate_threshold <- function(tavg, ptot, psummer, pwinter) {
                    sum(psummer) > pth ~ 20*tavg+280,
                    TRUE               ~ 20*tavg+140)
 }
+

@@ -4,16 +4,17 @@
 \name{geotools-package}
 \alias{geotools}
 \alias{geotools-package}
-\title{geotools: Provide Support for Geography Packages}
+\title{geotools: Support for Geography Packages}
 \description{
 \if{html}{\figure{logo.png}{options: style='float: right' alt='logo' width='120'}}
 
-Support functions for the geographer package.
+Support functions for the GeoVerse packages.
 }
 \seealso{
 Useful links:
 \itemize{
   \item \url{https://geotools.nenuial.org}
+  \item Report bugs at \url{http://github.com/nenuial/geotools/issues/}
 }
 
 }

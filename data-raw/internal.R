@@ -9,6 +9,9 @@ crs_regional <- readxl::read_excel(here::here("inst/extdata/gis/crs_regional.xls
 
 crs_proj <- readxl::read_excel(here::here("inst/extdata/gis/crs_proj.xlsx"))
 
+tissot_matrix <- sf::st_read("inst/extdata/gis/TissotsIndicatrix.gdb/", layer = "TissotEllipses") |>
+  sf::st_wrap_dateline(c("WRAPDATELINE=YES", "DATELINEOFFSET=5"))
+
 # Taken from ?demography::hmd (needs quick cleanup)
 hmd_codes <- readr::read_tsv(here::here("inst/extdata/hmdcodes/HMD_codes.tsv"), col_types = "cc")
 
@@ -19,6 +22,7 @@ usethis::use_data(
   crs_regional,
   crs_proj,
   hmd_codes,
+  tissot_matrix,
   internal = T,
   overwrite = T
 )

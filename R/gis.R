@@ -55,3 +55,14 @@ gtl_crs_regional <- function(country) {
 
   sf::st_crs(crs$proj4)
 }
+
+#' World Tissot Matrix
+#'
+#' @return A simple feature layer
+#' @export
+#'
+#' @examples
+#' gtl_gis_tissot_indicatrix()
+gtl_gis_tissot_indicatrix <- function() {
+  tissot_matrix
+}

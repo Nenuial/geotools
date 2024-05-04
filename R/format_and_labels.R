@@ -38,3 +38,29 @@ gtl_full_date <- function(date) {
     format(clock::date_parse(date), "%d %B %Y")
   )
 }
+
+#' Reformat santoku chop dash labels
+#'
+#' This function can be used to reformat the levels produced
+#' by the [`santoku::lbl_dash()`] function.
+#'
+#' @seealso [santoku::lbl_dash()]
+#'
+#' @param x A string vector of labels
+#'
+#' @return A string vector with clean labels
+#' @export
+#' @examples
+#' data <- seq(1, 20)
+#' data_cut <- santoku::chop(data, breaks = c(5,7,13),
+#'                           labels = santoku::lbl_dash(),
+#'                           extend = TRUE, drop = FALSE)
+#' forcats::fct_relabel(data_cut, gtl_relabel_dash)
+#'
+gtl_relabel_dash <- function(x) {
+  dplyr::case_when(
+    stringr::str_detect(x, "-Inf")  ~ stringr::str_replace(x, "-Inf\u2014(.*)", "< \\1"),
+    stringr::str_detect(x, "Inf")   ~ stringr::str_replace(x, "(.*?)\u2014Inf", "> \\1"),
+    TRUE                            ~ x
+  )
+}
