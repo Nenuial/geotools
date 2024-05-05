@@ -61,18 +61,18 @@ Provide custom countrycode function
 }
 \examples{
 tibble::tribble(
- ~canton, ~population,
- "Neuchâtel", 176496,
- "Vaud", 805098,
- "Genève", 504128
+  ~canton, ~population,
+  "Neuchâtel", 176496,
+  "Vaud", 805098,
+  "Genève", 504128
 ) -> population
 
 population |>
- dplyr::mutate(iso = gtl_admin_code(
-   sourcevar = canton,
-   origin = "canton.name.regex",
-   destination = "iso",
-   origin_regex = TRUE,
-   country = "Switzerland"
- ))
+  dplyr::mutate(iso = gtl_admin_code(
+    sourcevar = canton,
+    origin = "canton.name.regex",
+    destination = "iso",
+    origin_regex = TRUE,
+    country = "Switzerland"
+  ))
 }

@@ -12,8 +12,8 @@
 #' gtl_chk_idb_api_key()
 #'
 gtl_chk_idb_api_key <- function() {
-  if (Sys.getenv('IDB_API') != '') {
-    api_key <- Sys.getenv('IDB_API')
+  if (Sys.getenv("IDB_API") != "") {
+    api_key <- Sys.getenv("IDB_API")
   } else if (is.null(api_key)) {
     cli::cli_abort(c(
       "No IDB API key set.",
@@ -75,4 +75,3 @@ gtl_dwnl_api_json <- function(call) {
     httr2::req_perform() |>
     httr2::resp_body_json()
 }
-

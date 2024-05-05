@@ -38,7 +38,7 @@ gtl_pkg_options <-
 #' # Change a setting and retrieve it
 #' gtl_options(plot_standard_width = 25)
 #' gtl_options("plot_standard_width")
-gtl_options <- function(...){
+gtl_options <- function(...) {
   # protect against the use of reserved words.
   settings::stop_if_reserved(...)
   gtl_pkg_options(...)
@@ -91,7 +91,7 @@ gtl_opt_set_i18n <- function(code) {
 #' gtl_opt_set_i18n("en_US")
 #' gtl_opt_short_language(valid = c("de", "fr"))
 gtl_opt_short_language <- function(valid = c("en", "fr")) {
-  if(gtl_pkg_options("language") %in% valid) {
+  if (gtl_pkg_options("language") %in% valid) {
     gtl_pkg_options("language")
   } else {
     valid[[1]]

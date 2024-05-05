@@ -53,7 +53,7 @@ gtl_hc_discrete_color_axis <- function(breaks, palette) {
     lvls = lvls,
     colors = colors
   ) |>
-    purrr::pmap(gtl_hc_discrete_color_list) -> color_axis_list
+    purrr::pmap(gtl_hc_discrete_color_list)
 }
 
 #' Function to build the highchart colorAxis list
@@ -73,4 +73,3 @@ gtl_hc_discrete_color_list <- function(...) {
     to = to
   )
 }
-

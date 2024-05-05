@@ -52,15 +52,17 @@ gtl_full_date <- function(date) {
 #' @export
 #' @examples
 #' data <- seq(1, 20)
-#' data_cut <- santoku::chop(data, breaks = c(5,7,13),
-#'                           labels = santoku::lbl_dash(),
-#'                           extend = TRUE, drop = FALSE)
+#' data_cut <- santoku::chop(data,
+#'   breaks = c(5, 7, 13),
+#'   labels = santoku::lbl_dash(),
+#'   extend = TRUE, drop = FALSE
+#' )
 #' forcats::fct_relabel(data_cut, gtl_relabel_dash)
 #'
 gtl_relabel_dash <- function(x) {
   dplyr::case_when(
-    stringr::str_detect(x, "-Inf")  ~ stringr::str_replace(x, "-Inf\u2014(.*)", "< \\1"),
-    stringr::str_detect(x, "Inf")   ~ stringr::str_replace(x, "(.*?)\u2014Inf", "> \\1"),
-    TRUE                            ~ x
+    stringr::str_detect(x, "-Inf") ~ stringr::str_replace(x, "-Inf\u2014(.*)", "< \\1"),
+    stringr::str_detect(x, "Inf") ~ stringr::str_replace(x, "(.*?)\u2014Inf", "> \\1"),
+    TRUE ~ x
   )
 }

@@ -7,20 +7,20 @@
 #' @export
 #' @examples
 #' tibble::tribble(
-#'  ~canton, ~population,
-#'  "Neuchâtel", 176496,
-#'  "Vaud", 805098,
-#'  "Genève", 504128
+#'   ~canton, ~population,
+#'   "Neuchâtel", 176496,
+#'   "Vaud", 805098,
+#'   "Genève", 504128
 #' ) -> population
 #'
 #' population |>
-#'  dplyr::mutate(iso = gtl_admin_code(
-#'    sourcevar = canton,
-#'    origin = "canton.name.regex",
-#'    destination = "iso",
-#'    origin_regex = TRUE,
-#'    country = "Switzerland"
-#'  ))
+#'   dplyr::mutate(iso = gtl_admin_code(
+#'     sourcevar = canton,
+#'     origin = "canton.name.regex",
+#'     destination = "iso",
+#'     origin_regex = TRUE,
+#'     country = "Switzerland"
+#'   ))
 gtl_admin_code <- function(..., country = c("China", "Switzerland", "Russia")) {
   country <- match.arg(country)
 
@@ -148,7 +148,8 @@ gtl_country_list_noaa <- function() {
 
   df <- readRDS(filename)
 
-  df |> dplyr::select(iso, country) |>
+  df |>
+    dplyr::select(iso, country) |>
     unique() |>
     dplyr::arrange(country) -> df
 

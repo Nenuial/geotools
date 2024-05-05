@@ -18,9 +18,11 @@ by the \code{\link[santoku:lbl_dash]{santoku::lbl_dash()}} function.
 }
 \examples{
 data <- seq(1, 20)
-data_cut <- santoku::chop(data, breaks = c(5,7,13),
-                          labels = santoku::lbl_dash(),
-                          extend = TRUE, drop = FALSE)
+data_cut <- santoku::chop(data,
+  breaks = c(5, 7, 13),
+  labels = santoku::lbl_dash(),
+  extend = TRUE, drop = FALSE
+)
 forcats::fct_relabel(data_cut, gtl_relabel_dash)
 
 }

@@ -1,5 +1,6 @@
 adm1_russia <- readxl::read_excel(here::here("inst/extdata/countrycodes/russia_adm1.xlsx"),
-                                  col_types = c(rosstat.number = "text"))
+  col_types = c(rosstat.number = "text")
+)
 
 adm1_switzerland <- readxl::read_excel(here::here("inst/extdata/countrycodes/switzerland_adm1.xlsx"))
 
@@ -23,6 +24,6 @@ usethis::use_data(
   crs_proj,
   hmd_codes,
   tissot_matrix,
-  internal = T,
-  overwrite = T
+  internal = TRUE,
+  overwrite = TRUE
 )
