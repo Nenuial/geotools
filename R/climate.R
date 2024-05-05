@@ -213,7 +213,7 @@ gtl_calculate_pwinter <- function(prec, lat) {
 #' @return The threshold number for Köppen evaporation (for B climates)
 #' @keywords internal
 gtl_calculate_threshold <- function(tavg, ptot, psummer, pwinter) {
-  pth <- (2 / 3) * ptot #nolint: object_usage_linter
+  pth <- (2 / 3) * ptot # nolint: object_usage_linter
 
   dplyr::case_when(
     sum(pwinter) > pth ~ 20 * tavg,
