@@ -7,7 +7,7 @@
 #' @export
 #' @examples
 #' data <- seq(1, 20)
-#' data_cut <- santoku::chop(data, breaks = c(5,10,15))
+#' data_cut <- santoku::chop(data, breaks = c(5, 10, 15))
 #' gtl_hc_color_axis(data_cut, rainbow)
 gtl_hc_color_axis <- function(breaks, palette) {
   lvls <- levels(breaks)
