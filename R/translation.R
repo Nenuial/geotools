@@ -35,7 +35,7 @@ translate_enfr <- function(english, french) {
 #' gtl_opt_set_i18n("en_US") # Set language to english
 #' gtl_translate_enfr("Hello world!", "Bonjour le monde !")
 gtl_translate_enfr <- function(english, french) {
-  language <- gtl_pkg_options("language") #nolint: object_usage_linter
+  language <- gtl_pkg_options("language") # nolint: object_usage_linter
 
   dplyr::case_when(
     language == "en" ~ english,
