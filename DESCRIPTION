@@ -1,5 +1,5 @@
-Package: geotools
 Type: Package
+Package: geotools
 Title: Support for Geography Packages
 Version: 1.0.0
 Authors@R: 
@@ -7,34 +7,34 @@ Authors@R:
            comment = c(ORCID = "0009-0001-5504-5084"))
 Maintainer: Pascal Burkhard <pascal.burkhard@gmail.com>
 Description: Support functions for the GeoVerse packages.
+License: MIT + file LICENSE
 URL: https://geotools.nenuial.org
 BugReports: http://github.com/nenuial/geotools/issues/
-License: MIT + file LICENSE
-Encoding: UTF-8
-LazyData: true
+Depends: 
+    R (>= 4.1)
 Imports: 
+    cli,
     clock,
     countrycode,
     dplyr,
-    ISOcodes,
     glue,
+    httr2,
+    ISOcodes,
     lifecycle,
     purrr,
-    tibble,
+    rappdirs,
     scales,
     settings,
     sf,
     stringr,
-    withr,
-    rappdirs,
-    cli,
+    tibble,
     wbstats,
-    httr2
+    withr
 Suggests:
-    santoku,
-    forcats
-RoxygenNote: 7.3.1
-Depends: 
-    R (>= 4.1)
-Roxygen: list(markdown = TRUE)
+    forcats,
+    santoku
 Config/Needs/website: nenuial/geopkg
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.1
