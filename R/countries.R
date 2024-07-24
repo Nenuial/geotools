@@ -90,7 +90,7 @@ gtl_swiss_canton_abbr <- function(canton_name) {
 #' @export
 #' @keywords internal
 admincode <- function(..., country = c("China", "Switzerland", "Russia")) {
-  lifecycle::deprecate_warn("1.0.0", "admincode()", "gtl_admin_code()")
+  lifecycle::deprecate_stop("1.1.0", "admincode()", "gtl_admin_code()")
 
   gtl_admin_code(..., country)
 }
