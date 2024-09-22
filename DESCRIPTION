@@ -11,7 +11,7 @@ License: MIT + file LICENSE
 URL: https://geotools.nenuial.org
 BugReports: http://github.com/nenuial/geotools/issues/
 Depends: 
-    R (>= 4.1)
+    R (>= 3.5)
 Imports: 
     cli,
     clock,
