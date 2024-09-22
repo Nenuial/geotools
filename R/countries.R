@@ -120,7 +120,7 @@ gtl_hmd_codes <- function() {
 #' gtl_country_list_wb()
 #'
 gtl_country_list_wb <- function() {
-  df <- wbstats::wbcountries()
+  df <- wbstats::wb_countries()
 
   df |>
     dplyr::filter(region != "Aggregates") -> df
