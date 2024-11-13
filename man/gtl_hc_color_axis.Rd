@@ -19,6 +19,6 @@ Return a list of color breaks for Higchart maps
 }
 \examples{
 data <- seq(1, 20)
-data_cut <- santoku::chop(data, breaks = c(5,10,15))
+data_cut <- santoku::chop(data, breaks = c(5, 10, 15))
 gtl_hc_color_axis(data_cut, rainbow)
 }
