@@ -15,7 +15,7 @@ Set or get options for my package
 \section{Supported options}{
 
 The following options are supported
-\itemize{
+\describe{
 \item{\code{language}}{The default language}
 \item{\code{country}}{The default country setting}
 \item{\code{theme}}{The default ggplot theme}

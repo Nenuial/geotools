@@ -21,7 +21,7 @@ gtl_pkg_options <-
 #'
 #' @section Supported options:
 #' The following options are supported
-#' \itemize{
+#' \describe{
 #'  \item{`language`}{The default language}
 #'  \item{`country`}{The default country setting}
 #'  \item{`theme`}{The default ggplot theme}
