@@ -46,7 +46,9 @@ gtl_hc_color_list <- function(...) {
 #' @return A list of lists to use in colorAxis' dataClasses argument
 #' @export
 gtl_hc_discrete_color_axis <- function(breaks, palette) {
-  lvls <- levels(breaks)
+  lvls <- breaks |>
+    unique() |>
+    sort()
   colors <- palette(length(lvls))
 
   tibble::tibble(
@@ -64,10 +66,11 @@ gtl_hc_discrete_color_axis <- function(breaks, palette) {
 gtl_hc_discrete_color_list <- function(...) {
   data <- list(...)
 
-  from <- as.character(data$lvls)
-  to <- as.character(data$lvls)
+  from <- as.integer(data$lvls)
+  to <- as.integer(data$lvls)
 
   list(
+    name = as.character(data$lvls),
     color = data$colors,
     from = from,
     to = to
