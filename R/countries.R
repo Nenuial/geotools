@@ -107,7 +107,8 @@ admincode <- function(..., country = c("China", "Switzerland", "Russia")) {
 #' gtl_hmd_codes()
 #'
 gtl_hmd_codes <- function() {
-  return(hmd_codes)
+  HMDHFDplus::getHMDcountries() |>
+    dplyr::select(name = Country, code = CNTRY)
 }
 
 #' World Bank country list

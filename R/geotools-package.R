@@ -6,4 +6,4 @@
 NULL
 
 # Globals
-utils::globalVariables(c("Name", "Part1", "country", "iso", "region", "update_city_list"))
+utils::globalVariables(c("Name", "Part1", "country", "iso", "region", "update_city_list", "Country", "CNTRY"))
