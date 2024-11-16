@@ -1,3 +1,7 @@
+# geotools (development version)
+
+* Use HMDHFDplus to access HMD data
+
 # geotools 1.1.0
 
 * Deprecate `admincode` as it isn't working anymore.
