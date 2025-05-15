@@ -55,7 +55,7 @@ gtl_chk_api_call <- function(call) {
       cli::cli_abort(c(
         "The API does not respond properly.",
         "i" = "Do you have an internet connection and an open proxy?",
-        "x" = "Connection to {url} failed."
+        "x" = "Connection to {call} failed."
       ))
     }
   )
@@ -72,6 +72,7 @@ gtl_chk_api_call <- function(call) {
 #'
 gtl_dwnl_api_json <- function(call) {
   httr2::request(call) |>
+    httr2::req_headers("User-Agent" = "Mozilla/5.0") |>
     httr2::req_perform() |>
     httr2::resp_body_json()
 }
