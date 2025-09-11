@@ -45,7 +45,7 @@ gtl_koppen_code <- function(temp, prec, lat) {
   }
 
   ## D climates
-  return(gtl_koppen_d_climates(temp, prec, pwinter, psummer))
+  gtl_koppen_d_climates(temp, prec, pwinter, psummer)
 }
 
 #' Internal function to determine E climates
@@ -56,9 +56,9 @@ gtl_koppen_code <- function(temp, prec, lat) {
 #' @keywords internal
 gtl_koppen_e_climates <- function(temp) {
   if (length(which(temp < 0)) == 12) {
-    return("EF")
+    "EF"
   } else {
-    return("ET")
+    "ET"
   }
 }
 
@@ -78,9 +78,13 @@ gtl_koppen_b_climates <- function(tavg, ptot, e_thresh) {
   } else {
     clim <- "BW"
   }
-  if (tavg > 18) clim <- glue::glue("{clim}h") else clim <- glue::glue("{clim}k")
+  if (tavg > 18) {
+    clim <- glue::glue("{clim}h")
+  } else {
+    clim <- glue::glue("{clim}k")
+  }
 
-  return(clim)
+  clim
 }
 
 #' Internal function to determine A climates
@@ -105,7 +109,7 @@ gtl_koppen_a_climates <- function(prec, ptot, pwinter, psummer) {
     clim <- "Aw"
   }
 
-  return(clim)
+  clim
 }
 
 #' Internal function to determine B climates
@@ -138,7 +142,7 @@ gtl_koppen_c_climates <- function(temp, prec, pwinter, psummer) {
     clim <- glue::glue("{clim}c")
   }
 
-  return(clim)
+  clim
 }
 
 #' Internal function to determine B climates
@@ -171,7 +175,7 @@ gtl_koppen_d_climates <- function(temp, prec, pwinter, psummer) {
     clim <- glue::glue("{clim}c")
   }
 
-  return(clim)
+  clim
 }
 
 #' Internal function to determine the summer precipitation months

@@ -129,7 +129,7 @@ gtl_country_list_wb <- function() {
   list <- as.list(df$iso3c)
   names(list) <- df$country
 
-  return(list)
+  list
 }
 
 #' NOAA country list
@@ -145,7 +145,9 @@ gtl_country_list_wb <- function() {
 gtl_country_list_noaa <- function() {
   cachedir <- rappdirs::user_cache_dir("geodata")
   filename <- file.path(cachedir, "ncdc_cities.RData")
-  if (!file.exists(filename)) update_city_list()
+  if (!file.exists(filename)) {
+    update_city_list()
+  }
 
   df <- readRDS(filename)
 
@@ -157,5 +159,5 @@ gtl_country_list_noaa <- function() {
   list <- as.list(df$iso)
   names(list) <- df$country
 
-  return(list)
+  list
 }
