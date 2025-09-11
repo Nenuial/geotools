@@ -34,6 +34,8 @@ Imports:
 Suggests:
     forcats,
     santoku
+Remotes:
+    nset-ornl/wbstats
 Config/Needs/website: nenuial/geopkg
 Encoding: UTF-8
 LazyData: true
