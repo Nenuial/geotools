@@ -35,7 +35,8 @@ Suggests:
     forcats,
     santoku
 Remotes:
-    nset-ornl/wbstats
+    nset-ornl/wbstats,
+    hughjonesd/santoku
 Config/Needs/website: nenuial/geopkg
 Encoding: UTF-8
 LazyData: true
