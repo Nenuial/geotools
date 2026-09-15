@@ -11,7 +11,7 @@ This function returns a list of World Bank countries
 for a choice selector in a Shiny app.
 }
 \examples{
-\dontshow{if (interactive()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
+\dontshow{if (interactive()) withAutoprint(\{ # examplesIf}
 # Not run: need the NCDC city database
 gtl_country_list_noaa()
 \dontshow{\}) # examplesIf}

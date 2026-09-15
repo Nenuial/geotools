@@ -50,7 +50,9 @@ gtl_chk_rnoaa_api_key <- function() {
 #' @return Returns an error if the API call fails
 gtl_chk_api_call <- function(call) {
   tryCatch(
-    httr2::request(call) |> httr2::req_perform(),
+    httr2::request(call) |>
+      httr2::req_headers("User-Agent" = "Mozilla/5.0") |>
+      httr2::req_perform(),
     error = function(e) {
       cli::cli_abort(c(
         "The API does not respond properly.",
