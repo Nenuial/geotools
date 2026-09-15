@@ -13,7 +13,7 @@ Returns an error if the NOAA API key is not properly set
 Function to check if the NOAA API key is correctly set.
 }
 \examples{
-\dontshow{if (interactive()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
+\dontshow{if (interactive()) withAutoprint(\{ # examplesIf}
 # Not run: fails if the NOAA API key isn't set
 
 gtl_chk_rnoaa_api_key()

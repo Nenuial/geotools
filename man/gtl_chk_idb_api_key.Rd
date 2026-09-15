@@ -13,7 +13,7 @@ Returns an error if the IDB API key is not properly set
 Function to check if the IDB API key is correctly set.
 }
 \examples{
-\dontshow{if (interactive()) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
+\dontshow{if (interactive()) withAutoprint(\{ # examplesIf}
 # Not run: fails if the IDB API key isn't set
 
 gtl_chk_idb_api_key()

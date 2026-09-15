@@ -18,6 +18,7 @@ Imports:
     countrycode,
     dplyr,
     glue,
+    highcharter,
     HMDHFDplus,
     httr2,
     ISOcodes,
@@ -35,9 +36,10 @@ Suggests:
     forcats,
     santoku
 Remotes:
-    nset-ornl/wbstats
+    nset-ornl/wbstats,
+    hughjonesd/santoku
 Config/Needs/website: nenuial/geopkg
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.3.2
+Config/roxygen2/version: 8.1.0

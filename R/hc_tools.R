@@ -28,8 +28,16 @@ gtl_hc_color_axis <- function(breaks, palette) {
 gtl_hc_color_list <- function(...) {
   data <- list(...)
 
-  from <- stringr::str_extract(data$lvls, "[\\[)]([^,]*),\\W([^\\])]*)[)\\]]", group = 1)
-  to <- stringr::str_extract(data$lvls, "[\\[)]([^,]*),\\W([^\\])]*)[)\\]]", group = 2)
+  from <- stringr::str_extract(
+    data$lvls,
+    "[\\[)]([^,]*),\\W([^\\])]*)[)\\]]",
+    group = 1
+  )
+  to <- stringr::str_extract(
+    data$lvls,
+    "[\\[)]([^,]*),\\W([^\\])]*)[)\\]]",
+    group = 2
+  )
 
   list(
     color = data$colors,
@@ -75,4 +83,23 @@ gtl_hc_discrete_color_list <- function(...) {
     from = from,
     to = to
   )
+}
+
+
+#' mapView options for highcharter objects
+#' @param hc A `highchart` htmlwidget object.
+#' @param ... Options as defined in <https://api.highcharts.com/highmaps/mapView>.
+#' @export
+gtl_hc_map_view <- function(hc, ...) {
+  stopifnot(highcharter::is.highchart(hc))
+  opts <- list(...)
+  if (is.null(hc$x$hc_opts[["mapView"]])) {
+    hc$x$hc_opts[["mapView"]] <- opts
+  } else {
+    hc$x$hc_opts[["mapView"]] <- utils::modifyList(
+      hc$x$hc_opts[["mapView"]],
+      opts
+    )
+  }
+  hc
 }

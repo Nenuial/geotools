@@ -42,7 +42,10 @@ of columns that are accepted as valid origin codes.
     \item{\code{custom_match}}{A named vector which supplies custom origin and
 destination matches that will supercede any matching default result. The name
 of each element will be used as the origin code, and the value of each
-element will be used as the destination code.}
+element will be used as the destination code. Values supplied via
+\code{custom_match} supersede ambiguous or duplicate matches and will not
+trigger the corresponding ambiguity/duplicate-match warnings for those
+values.}
     \item{\code{origin_regex}}{NULL or Logical: When using a custom
 dictionary, if TRUE then the origin codes will be matched as
 regex, if FALSE they will be matched exactly. When NULL,
