@@ -90,7 +90,7 @@ gtl_hc_discrete_color_list <- function(...) {
 #' @param hc A `highchart` htmlwidget object.
 #' @param ... Options as defined in <https://api.highcharts.com/highmaps/mapView>.
 #' @export
-gtl_hc_mapView <- function(hc, ...) {
+gtl_hc_map_view <- function(hc, ...) {
   stopifnot(highcharter::is.highchart(hc))
   opts <- list(...)
   if (is.null(hc$x$hc_opts[["mapView"]])) {

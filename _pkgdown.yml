@@ -61,13 +61,14 @@ reference:
   - gtl_sci_10_html
   - gtl_relabel_dash
 
-- title: Projection
+- title: GIS
   description: |
-    Provide functions for CRS projections
+    Provide functions for mapping
   contents:
   - gtl_crs_proj
   - gtl_crs_regional
   - gtl_gis_tissot_indicatrix
+  - gtl_hc_map_view
 
 - title: Options and language
   description: |
