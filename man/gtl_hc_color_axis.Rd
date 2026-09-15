@@ -7,7 +7,7 @@
 gtl_hc_color_axis(breaks, palette)
 }
 \arguments{
-\item{breaks}{The data with the breaks (using chopped data with \code{\link[santoku:santoku-package]{santoku::santoku}})}
+\item{breaks}{The data with the breaks (using chopped data with \code{\link[santoku:santoku]{santoku::santoku}})}
 
 \item{palette}{A color palette that can take a numeric argument}
 }
