@@ -80,4 +80,5 @@ reference:
   - gtl_opt_short_language
   - gtl_opt_long_language
   - gtl_translate_enfr
+  - gtl_fr_typo
   - gtl_translator

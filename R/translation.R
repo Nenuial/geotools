@@ -39,9 +39,31 @@ gtl_translate_enfr <- function(english, french) {
 
   dplyr::case_when(
     language == "en" ~ english,
-    language == "fr" ~ french,
+    language == "fr" ~ gtl_fr_typo(french),
     TRUE ~ english
   )
+}
+
+#' French typography
+#'
+#' Puts a non-breaking space (U+00A0) before ; : ! ? » and %, and after
+#' «, in place of a plain space, so that these signs never start a line.
+#' The non-breaking space is in Latin-1, so every pdf device can draw it.
+#' [gtl_translate_enfr()] applies it to the French strings. Anything but text
+#' is returned unchanged.
+#'
+#' @param x A character vector of French text
+#'
+#' @return The text with non-breaking spaces
+#' @export
+#' @examples
+#' gtl_fr_typo("Source : OFS ; Donn\u00e9es : 2024, soit 12 %")
+gtl_fr_typo <- function(x) {
+  if (!is.character(x)) {
+    return(x)
+  }
+  x <- gsub(" ([;:!?%\u00bb])", "\u00a0\\1", x)
+  gsub("\u00ab ", "\u00ab\u00a0", x)
 }
 
 #' Creates translation function for named string list
