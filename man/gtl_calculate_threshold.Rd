@@ -2,23 +2,23 @@
 % Please edit documentation in R/climate.R
 \name{gtl_calculate_threshold}
 \alias{gtl_calculate_threshold}
-\title{Internal function to determine the Köppen threshold number}
+\title{Internal function to determine the Köppen aridity threshold}
 \usage{
-gtl_calculate_threshold(tavg, ptot, psummer, pwinter)
+gtl_calculate_threshold(mat, map, psummer, pwinter)
 }
 \arguments{
-\item{tavg}{The annual average temperature}
+\item{mat}{The mean annual temperature}
 
-\item{ptot}{The annual total precipitation}
+\item{map}{The mean annual precipitation}
 
 \item{psummer}{A vector with the precipitation in summer months}
 
 \item{pwinter}{A vector with the precipitation in winter months}
 }
 \value{
-The threshold number for Köppen evaporation (for B climates)
+The aridity threshold in mm (for B climates)
 }
 \description{
-Internal function to determine the Köppen threshold number
+Internal function to determine the Köppen aridity threshold
 }
 \keyword{internal}
