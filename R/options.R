@@ -68,6 +68,15 @@ gtl_opt_set_i18n <- function(code) {
   }
   gtl_pkg_options(language = stringr::str_split(code, "_")[[1]][[1]])
   gtl_pkg_options(country = stringr::str_split(code, "_")[[1]][[2]])
+
+  # Highcharts thousands separator: a non-breaking space in French, so that
+  # "2 105" never breaks; loading highcharter first keeps its .onLoad from
+  # resetting the option
+  if (requireNamespace("highcharter", quietly = TRUE)) {
+    lang <- getOption("highcharter.lang")
+    lang$thousandsSep <- if (gtl_pkg_options("language") == "fr") "\u00a0" else " " # nolint: object_usage_linter
+    options(highcharter.lang = lang)
+  }
 }
 
 #' Return short language code
