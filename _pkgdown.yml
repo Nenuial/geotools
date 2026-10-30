@@ -55,10 +55,11 @@ reference:
 
 - title: Formatting and labels
   description: |
-    Provide functions to format different elements (dates, scientific notation).
+    Provide functions to format different elements (dates, numbers, scientific notation).
   contents:
   - gtl_full_date
   - gtl_sci_10_html
+  - gtl_label_number
   - gtl_relabel_dash
 
 - title: GIS
