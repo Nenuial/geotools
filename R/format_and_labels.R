@@ -39,6 +39,57 @@ gtl_full_date <- function(date) {
   )
 }
 
+#' Format numbers in the current language
+#'
+#' Label functions for ggplot2 scales (or for any vector of numbers) that
+#' follow the current language setting (see [`gtl_opt_set_i18n()`]): an
+#' apostrophe between thousands in every language (60'000), a decimal comma in
+#' French and German (2,5) and a space before the percent sign in French and
+#' German (2,5 %). The language is read when the numbers are formatted.
+#'
+#' @seealso [gtl_opt_set_i18n()]
+#'
+#' @param ... Arguments passed on to [`scales::number()`] or
+#'   [`scales::percent()`] (`accuracy`, `scale`, `suffix`...)
+#'
+#' @return A function that formats numbers
+#' @export
+#' @examples
+#' gtl_opt_set_i18n("fr_CH")
+#' gtl_label_number()(c(60000, 2.5))
+#' gtl_label_percent(accuracy = 0.1)(0.025)
+#'
+#' gtl_opt_set_i18n("en_US")
+#' gtl_label_number()(c(60000, 2.5))
+#' gtl_label_percent(accuracy = 0.1)(0.025)
+gtl_label_number <- function(...) {
+  function(x) {
+    do.call(scales::number, c(list(x), gtl_number_marks(list(...))))
+  }
+}
+
+#' @rdname gtl_label_number
+#' @export
+gtl_label_percent <- function(...) {
+  function(x) {
+    marks <- gtl_number_marks(list(...))
+    if (is.null(marks$suffix)) {
+      marks$suffix <- if (gtl_pkg_options("language") %in% c("fr", "de")) "\u00a0%" else "%"
+    }
+    do.call(scales::percent, c(list(x), marks))
+  }
+}
+
+# The marks of the current language, under the arguments given
+gtl_number_marks <- function(args) {
+  marks <- list(
+    big.mark = "'",
+    decimal.mark = if (gtl_pkg_options("language") %in% c("fr", "de")) "," else "."
+  )
+  marks[names(args)] <- args
+  marks
+}
+
 #' Reformat santoku chop dash labels
 #'
 #' This function can be used to reformat the levels produced

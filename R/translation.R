@@ -20,9 +20,10 @@ translate_enfr <- function(english, french) {
 #'
 #' @param english English string
 #' @param french French string
+#' @param german German string, English when not given
 #'
-#' A function that returns the english or french argument depending
-#' on the current language setting.
+#' A function that returns the english, french or german argument depending
+#' on the current language setting. Any other language gets the english one.
 #'
 #' @seealso [gtl_opt_set_i18n()]
 #'
@@ -32,14 +33,18 @@ translate_enfr <- function(english, french) {
 #' gtl_opt_set_i18n("fr_CH") # Set language to french
 #' gtl_translate_enfr("Hello world!", "Bonjour le monde !")
 #'
+#' gtl_opt_set_i18n("de_CH") # Set language to german
+#' gtl_translate_enfr("Hello world!", "Bonjour le monde !", "Hallo Welt!")
+#'
 #' gtl_opt_set_i18n("en_US") # Set language to english
 #' gtl_translate_enfr("Hello world!", "Bonjour le monde !")
-gtl_translate_enfr <- function(english, french) {
+gtl_translate_enfr <- function(english, french, german = english) {
   language <- gtl_pkg_options("language") # nolint: object_usage_linter
 
   dplyr::case_when(
     language == "en" ~ english,
     language == "fr" ~ gtl_fr_typo(french),
+    language == "de" ~ german,
     TRUE ~ english
   )
 }
